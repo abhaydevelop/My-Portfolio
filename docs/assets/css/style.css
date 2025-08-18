@@ -644,6 +644,13 @@ a:hover{
     margin: 0;
 }
 
+.skill-desc {
+    font-size: 13px;
+    color: #bbb;   /* muted color */
+    margin-top: 2px;
+    text-align: center;
+}
+
 /*--------------------------------------------------------------
 # Tools Section
 --------------------------------------------------------------*/
