@@ -37,6 +37,27 @@
         })(window, document, "clarity", "script", "phycesbqlg");
     </script>
 
+    <script>
+  function updateGreeting() {
+    const now = new Date().toLocaleString("en-US", { timeZone: "Asia/Kolkata" });
+    const hour = new Date(now).getHours();
+
+    let greeting;
+    if (hour >= 5 && hour < 12) {
+      greeting = "Good Morning, I'm";
+    } else if (hour >= 12 && hour < 17) {
+      greeting = "Good Afternoon, I'm";
+    } else {
+      greeting = "Good Evening, I'm";
+    }
+
+    document.getElementById("greeting").textContent = greeting;
+  }
+
+  updateGreeting();
+</script>
+
+
 </head>
 
 <body data-bs-theme="dark" data-bs-spy="scroll" data-bs-target="#navbar">
@@ -89,7 +110,7 @@
                     </div>
                 </div>
                 <div class="col-lg-7 order-lg-1 hero-content">
-                    <span class="h3" data-aos="fade-up" data-aos-delay="0">Namasté, I'm</span>
+                    <span id="greeting" class="h3" data-aos="fade-up" data-aos-delay="0"></span>
                     <h1 class="name" data-aos="fade-up" data-aos-delay="200"><span>Abhay Gupta</h1>
                     <button type="button" class="btn btn-sm mt-3 mb-3 btn-showcase"  data-aos="fade-up" data-aos-delay="400"><i class="bi bi-stars"></i> Android Developer</button>
                     <p class="tagline mb-3" data-aos="fade-up" data-aos-delay="600">From accidental beginnings to <span class="underline">intentional creations </span> — my journey has been exciting. I’m an <span class="underline">Android Developer</span> passionate about apps and clean templates. I love turning ideas into experiences that are simple yet powerful.
